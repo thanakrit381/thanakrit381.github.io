@@ -1,35 +1,32 @@
-<!DOCTYPE html> <!-- ประกาศชนิดเอกสารเป็น HTML5 -->
-<html lang="en"> <!-- เปิดแท็ก html และระบุภาษาว่าอังกฤษ -->
-<head> <!-- เริ่มส่วน head ของเอกสาร (เมตา, สไตล์, ชื่อหน้า) -->
-  <meta charset="utf-8"> <!-- กำหนดการเข้ารหัสตัวอักษรเป็น UTF-8 -->
-  <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- ทำให้ layout ตอบสนองบนมือถือ -->
-  <title>Centered Image</title> <!-- ชื่อหน้าที่แสดงบนแท็บเบราว์เซอร์ -->
-  <style> /* เริ่มบล็อก CSS แบบฝังหน้า (inline CSS) */
-    /* ตั้งค่าให้ body และ html ยืดเต็มความสูงของหน้าจอทั้งหมด */
-    html, body { height: 100%; margin: 0; padding: 0; } 
-    /* ใช้ Flexbox เพื่อจัดให้องค์ประกอบภายในอยู่กึ่งกลางทั้งแนวนอนและแนวตั้ง */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Centered Image</title>
+  <style>
+    html, body { height: 100%; margin: 0; padding: 0; }
     body {
-      display: flex; /* เปิดโหมด flex */
-      align-items: center; /* จัดแนวตั้งกึ่งกลาง */
-      justify-content: center; /* จัดแนวนอนกึ่งกลาง */
-      background: #ffffff; /* พื้นหลังสีขาว (เปลี่ยนได้) */
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background: #ffffff;
     }
-    /* สไตล์สำหรับรูป ให้ไม่ล้นหน้าจอและรักษาอัตราส่วน */
     img.centered-image {
-      max-width: 90vw; /* กว้างไม่เกิน 90% ของ viewport กว้าง */
-      max-height: 90vh; /* สูงไม่เกิน 90% ของ viewport สูง */
-      width: auto; /* ให้ขนาดกว้างเป็นอัตโนมัติเพื่อรักษาอัตราส่วน */
-      height: auto; /* ให้ขนาดสูงเป็นอัตโนมัติเช่นกัน */
-      display: block; /* เอาช่องว่างของ inline image ออก */
+      max-width: 100vw;
+      max-height: 100vh;
+      width: auto;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
-  </style> <!-- จบบล็อก CSS -->
-</head> <!-- ปิดส่วน head -->
-<body> <!-- เริ่มส่วนเนื้อหา body ที่จะแสดงผลจริง -->
-  <!-- ใส่รูปเดียวตรงกลาง เปลี่ยนค่า src เป็น path หรือ URL ของรูปที่ต้องการ -->
+  </style>
+</head>
+<body>
   <img
-    class="centered-image" <!-- กำหนดคลาสเพื่อให้ CSS ด้านบนทำงานกับรูปนี้ -->
-    src="your-image.jpg" <!-- ใส่ไฟล์รูปของคุณที่นี่ เช่น "images/photo.jpg" หรือ "https://..." -->
-    alt="Centered image" <!-- ข้อความสำรองสำหรับกรณีรูปโหลดไม่ได้ และสำหรับ accessibility -->
+    class="centered-image"
+    src="retroactive.png"
+    alt="Centered image"
   >
-</body> <!-- ปิดแท็ก body -->
-</html> <!-- ปิดเอกสาร HTML -->
+</body>
+</html>
